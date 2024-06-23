@@ -5,7 +5,7 @@ const {
 	selectquestion,
 	selectsinglequestion,
 	selectansawer,
-} = require("../Controller/questionController");
+} = require("../controller/questionController");
 questionRouter.post("/askquestion", question);
 questionRouter.get("/selectquestion", selectquestion);
 questionRouter.get("/selectsinglequestion", selectsinglequestion);
