@@ -7,11 +7,6 @@ const dbconnection = mysql2.createPool({
 	password: process.env.PASSWORD,
 	database: process.env.DATABASE,
 });
-console.log("DBHOST:", process.env.DBHOST);
-console.log("MYUSER:", process.env.MYUSER);
-console.log("DATABASE:", process.env.DATABASE);
-console.log("PASSWORD:", process.env.PASSWORD);
-
 dbconnection.execute("SELECT 'test' AS result", (err, result) => {
 	if (err) {
 		console.error(err);

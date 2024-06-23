@@ -21,8 +21,6 @@ app.get("/",(req, res)=>{
 async function start() {
 	try {
 		const [rows] = await dbconnection.execute("SELECT 'test' AS result");
-		console.log("Database connection established:", rows);
-
 		app.listen(port, () => {
 			console.log(`Listening on port ${port}`);
 		});
