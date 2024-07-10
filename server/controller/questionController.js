@@ -2,6 +2,7 @@
 const dbconnection = require("../db/dbConfig");
 const { StatusCodes } = require("http-status-codes");
 async function question(req, res) {
+	console.log("Haye")
 	const questionId = Math.floor(1000000000 + Math.random() * 9000000000);
 	const { userid, title, description } = req.body;
 	if (!title || !description || !userid || !questionId) {
